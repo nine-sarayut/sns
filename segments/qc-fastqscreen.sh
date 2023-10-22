@@ -63,7 +63,7 @@ fastqscreen_txt="${fastqscreen_txt/.fastq.gz/}"
 
 # unload all loaded modulefiles
 module purge
-module add default-environment
+# module add default-environment
 
 
 #########################

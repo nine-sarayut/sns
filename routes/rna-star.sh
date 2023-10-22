@@ -75,8 +75,8 @@ if [ -n "$fastq_R2" ] ; then
 fi
 
 # fastq_screen
-bash_cmd="bash ${code_dir}/segments/qc-fastqscreen.sh $proj_dir $sample $threads $fastq_R1"
-($bash_cmd)
+# bash_cmd="bash ${code_dir}/segments/qc-fastqscreen.sh $proj_dir $sample $threads $fastq_R1"
+# ($bash_cmd)
 
 # trim FASTQs with Trimmomatic
 segment_fastq_trim="fastq-trim-trimmomatic"
