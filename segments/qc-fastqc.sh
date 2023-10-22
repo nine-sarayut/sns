@@ -73,7 +73,7 @@ fi
 
 # run FastQC
 
-module add fastqc/0.11.7
+module add fastqc
 
 echo
 echo " * FastQC path: $(readlink -f $(which fastqc)) "

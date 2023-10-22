@@ -52,7 +52,7 @@ star_prefix="${star_logs_dir}/${sample}_"
 
 # unload all loaded modulefiles
 module purge
-module add default-environment
+# module add default-environment
 
 
 #########################
@@ -112,7 +112,8 @@ fi
 # STAR
 
 # star/2.7.3a loads samtools/1.9
-module add star/2.7.3a
+module add star
+module add samtools
 
 echo
 echo " * STAR: $(readlink -f $(which STAR)) "

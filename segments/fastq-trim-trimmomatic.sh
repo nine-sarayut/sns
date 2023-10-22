@@ -66,7 +66,7 @@ trimmomatic_log="${trimmomatic_logs_dir}/${sample}.txt"
 
 # unload all loaded modulefiles
 module purge
-module add default-environment
+# module add default-environment
 
 
 #########################
@@ -111,9 +111,9 @@ fi
 
 # Trimmomatic
 
-module add trimmomatic/0.36
+module add trimmomatic
 
-trimmomatic_jar="${TRIMMOMATIC_ROOT}/trimmomatic-0.36.jar"
+trimmomatic_jar="${TRIMMOMATIC_ROOT}/trimmomatic-0.39.jar"
 
 # check if the trimmomatic jar file is present
 if [ ! -s "$trimmomatic_jar" ] ; then
