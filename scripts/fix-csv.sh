@@ -26,7 +26,7 @@ if [ ! -s "$csv" ] ; then
 fi
 
 # load module
-module add dos2unix/7.4.0
+# module add dos2unix/7.4.0
 
 # fix newlines
 dos2unix --quiet $csv

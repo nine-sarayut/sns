@@ -194,7 +194,7 @@ sub run_samples {
 		my $sbatch_name = "--job-name=sns.${route}.${sample}";
 		my $sbatch_mail = "--mail-user=${email} --mail-type=FAIL,REQUEUE";
 		my $mem = $threads * 8;
-		my $sbatch_res = "--time=${route_time} -p Lewis,BioCompute -A spencerlab --nodes=1 --ntasks=1 --cpus-per-task=${threads} --mem=${mem}G";
+		my $sbatch_res = "--time=${route_time} -p Lewis,BioCompute -A spencerlab -N 1 -n 20 --mem=${mem}G";
 		my $sbatch_cmd = "sbatch $sbatch_res $sbatch_name $sbatch_mail --export=NONE --wrap='${cmd}'";
 
 		print "\n CMD: $sbatch_cmd \n";
@@ -229,7 +229,7 @@ sub run_groups {
 	chomp($email);
 	my $sbatch_name = "--job-name=sns.${route}";
 	my $sbatch_mail = "--mail-user=${email} --mail-type=FAIL,REQUEUE";
-	my $sbatch_res = "--time=10:00:00 -p Lewis,BioCompute -A spencerlab --nodes=1 --ntasks=1 --cpus-per-task=40 --mem=200G";
+	my $sbatch_res = "--time=10:00:00 -p Lewis,BioCompute -A spencerlab -N 1 -n 20 --mem=200G";
 	my $sbatch_cmd = "sbatch $sbatch_res $sbatch_name $sbatch_mail --export=NONE --wrap='${cmd}'";
 
 	print "\n CMD: $sbatch_cmd \n";

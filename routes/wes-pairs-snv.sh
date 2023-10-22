@@ -73,8 +73,8 @@ fi
 # segments
 
 # common sbatch settings
-sbatch_perf="--nodes=1 --ntasks=1 --cpus-per-task=5 --mem-per-cpu=8G"
-sbatch_mail="--mail-user=${USER}@nyulangone.org --mail-type=FAIL,REQUEUE"
+sbatch_perf="-p Lewis,BioCompute -A spencerlab -N 1 -n 20 --mem=200G"
+sbatch_mail="--mail-user=${USER}@missouri.edu --mail-type=FAIL,REQUEUE"
 
 sleep 5
 
